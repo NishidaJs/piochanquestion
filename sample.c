@@ -39,16 +39,16 @@ void doJob() {
                     currentMaxLength = length;
                 }
             }
-            inValueOne = 0; //Resetting this flag to allow Line 28 re-triggered.
+            inValueOne = 0; // Resetting this flag to allow Line 28 re-triggered.
         }
         printf("\n%d - %d - %d", startPos, endPos, currentMaxLength); // For debug purpose.
     }
-    if(oneCount == 0) {
+    if(oneCount == 0) { // For all zeroes
         startPos = -1;
         endPos = -1;
         currentMaxLength = 0;
     }
-    if(oneCount == sizeof(input)) {
+    if(oneCount == sizeof(input)) { //For all ones
         startPos = 0;
         endPos = sizeof(input - 1);
         currentMaxLength = sizeof(input);
